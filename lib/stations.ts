@@ -228,5 +228,8 @@ export const SUBLINEAS: { id: LineaId; paradas: string[] }[] = [
 ];
 
 export const EMAIL = "alejosuredaoteo2007@gmail.com";
-export const GITHUB = { url: "https://github.com/Panaiaio", texto: "github.com/alejo-sureda-oteo" };
-export const LINKEDIN = { url: "www.linkedin.com/in/alejo-sureda-oteo-000b40394", texto: "linkedin.com/in/alejo-sureda-oteo" };
+// GitHub personal (también es el enlace por defecto de los botones "Ver repositorio")
+export const GITHUB = { url: "https://github.com/Augusisquiubs07?tab=repositories", texto: "github.com/Augusisquiubs07" };
+// GitHub del instituto
+export const GITHUB_INSTI = { url: "https://github.com/Panaiaio?tab=repositories", texto: "github.com/Panaiaio" };
+export const LINKEDIN = { url: "https://www.linkedin.com/in/alejo-sureda-oteo-000b40394/?isSelfProfile=true", texto: "linkedin.com/in/alejo-sureda-oteo" };

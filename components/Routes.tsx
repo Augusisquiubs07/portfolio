@@ -12,11 +12,14 @@ interface Ficha {
   claveTitulo?: string;
   prefijo?: "cm" | "crm"; // textos de i18n del proyecto
   claveDesc?: string;
+  repo?: string; // enlace del botón "Ver repositorio". Si se deja vacío, lleva a tu perfil de GitHub
 }
 
 const FICHAS: Ficha[] = [
-  { id: "l2", codigo: "L2", titulo: "Card Manager", prefijo: "cm" },
-  { id: "l3", codigo: "L3", titulo: "CRM Mi Mascota", prefijo: "crm" },
+  { id: "l2", codigo: "L2", titulo: "Card Manager", prefijo: "cm",
+    repo: "https://github.com/Augusisquiubs07/card-manager.git" }, // ← pega aquí la URL del repo de Card Manager
+  { id: "l3", codigo: "L3", titulo: "CRM Mi Mascota", prefijo: "crm",
+    repo: "https://github.com/Panaiaio/crm-mimascota.git" }, // ← pega aquí la URL del repo del CRM Mi Mascota
   { id: "l4", codigo: "L4", titulo: "Nobu", claveDesc: "nobu_desc" },
   { id: "l1", codigo: "L1", titulo: null, claveTitulo: "l_path", claveDesc: "path_p" },
 ];
@@ -56,7 +59,7 @@ export function Routes() {
                       <dt>{t("l_team")}</dt><dd>{t(`${f.prefijo}_team`)}</dd>
                       <dt>{t("l_tech")}</dt><dd>{t(`${f.prefijo}_stack`)}</dd>
                     </dl>
-                    <a className="repo" href={GITHUB.url} target="_blank" rel="noopener noreferrer">{t("repo")}</a>
+                    <a className="repo" href={f.repo || GITHUB.url} target="_blank" rel="noopener noreferrer">{t("repo")}</a>
                   </>
                 )}
               </div>

@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { useLang } from "./LangProvider";
-import { EMAIL, GITHUB, LINKEDIN } from "@/lib/stations";
+import { EMAIL, GITHUB, GITHUB_INSTI, LINKEDIN } from "@/lib/stations";
 
 export function Contact() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [copiado, setCopiado] = useState(false);
 
   const copiar = async () => {
@@ -29,8 +29,12 @@ export function Contact() {
           <button onClick={copiar}>{copiado ? t("copied") : t("copy")}</button>
         </div>
         <div>
-          <small>GitHub</small>
+          <small>{lang === "es" ? "GitHub personal" : "Personal GitHub"}</small>
           <a href={GITHUB.url} target="_blank" rel="noopener noreferrer">{GITHUB.texto}</a>
+        </div>
+        <div>
+          <small>{lang === "es" ? "GitHub del instituto" : "School GitHub"}</small>
+          <a href={GITHUB_INSTI.url} target="_blank" rel="noopener noreferrer">{GITHUB_INSTI.texto}</a>
         </div>
         <div>
           <small>LinkedIn</small>

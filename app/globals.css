@@ -142,10 +142,10 @@ section.block{padding-block:72px 0}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{display:inline-flex;align-items:center;gap:5px;font:600 12.5px var(--f-mono);padding:3px 9px;border-radius:999px;background:var(--soft);border:1px solid var(--rule)}
 .tag i{display:inline-flex;gap:2px} .tag i span{width:8px;height:8px;border-radius:50%}
-.contact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.contact div{background:var(--paper);border:2px solid var(--ink);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.contact{display:flex;flex-wrap:wrap;gap:12px}
+.contact div{flex:1 1 auto;background:var(--paper);border:2px solid var(--ink);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .contact small{font:600 11px var(--f-mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3)}
-.contact b,.contact a{font-weight:700;overflow-wrap:anywhere}
+.contact b,.contact a{font-weight:700;font-size:15px;white-space:nowrap}
 .contact button{align-self:flex-start;border:2px solid var(--ink);background:transparent;border-radius:7px;padding:4px 10px;font-weight:700;font-size:13px;cursor:pointer;margin-top:4px}
 footer{margin-top:72px;background:var(--ink);color:var(--bg);padding-block:20px}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:400 13px var(--f-mono)}
@@ -157,9 +157,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   .mapbox{grid-template-columns:minmax(0,1fr)}
   .map-scroll{border-right:0;border-bottom:2px solid var(--ink)}
   .route-head{border-right:0;border-bottom:2px solid var(--ink)}
-  .contact{grid-template-columns:minmax(0,1fr)}
+  .contact{flex-direction:column}
 }
-@media (max-width:560px){ .top-in{gap:10px} .sign span{display:none} }
+@media (max-width:560px){ .top-in{gap:10px} .sign span{display:none} .contact b,.contact a{white-space:normal;overflow-wrap:anywhere} }
 @media (prefers-reduced-motion:reduce){ *,*::before,*::after{animation:none!important;transition:none!important} .map .ln.draw{stroke-dashoffset:0} html{scroll-behavior:auto} }
 
 /* añadidos para la versión Next.js */
