@@ -38,7 +38,7 @@ export function Routes() {
     <section className="block" id="lineas">
       <div className="sec-h">
         <span className="badge b2">L2</span>
-        <div><h2>{t("l_projects")}</h2><p>{t("lines_p")}</p></div>
+        <div><h2>{t("l_projects")}</h2></div>
       </div>
 
       <div className="routes">
